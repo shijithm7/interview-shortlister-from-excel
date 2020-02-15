@@ -1,0 +1,34 @@
+'''def csv_from_excel():
+    wb = xlrd.open_workbook('mavoix_ml_sample_dataset.xlsx')
+    sh = wb.sheet_by_name('Sheet1')
+    your_csv_file = open('your_csv_file.csv', 'w')
+    wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL)
+
+    for rownum in range(sh.nrows):
+        wr.writerow(sh.row_values(rownum))
+
+    your_csv_file.close()
+
+# runs the csv_from_excel function:
+csv_from_excel()
+
+new = pd.read_csv('your_csv_file.csv', index_col='Name')
+##print(new.head())'''
+
+#your_csv_file = open('your_csv_file.csv', 'w')
+#wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL)
+
+#for i in range(sheet.nrows):
+ #   for j in range(22):
+        #wr.writerow(sheet.row_values(i))
+'''
+
+
+import pandas as pd
+df = pd.read_excel('mavoix_ml_sample_dataset.xlsx', header=0) #, sheetname='<your sheet>'
+df.to_csv('master_file.csv', index=False, quotechar="'")
+new = pd.read_csv('master_file.csv')
+for row in new:
+        print(row[2])
+        
+#print(new)'''
